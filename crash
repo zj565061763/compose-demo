@@ -32,4 +32,3 @@ import kotlin.Metadata;
 )
 public final class AppDisplay extends SubDisplay {
 }
-
