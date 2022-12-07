@@ -6,7 +6,11 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 
 open class Display {
-    var content by mutableStateOf<(@Composable () -> Unit)?>(null)
+    private var _content by mutableStateOf<(@Composable () -> Unit)?>(null)
+
+    fun setContent(content: @Composable () -> Unit) {
+        _content = content
+    }
 }
 
 open class SubDisplay : Display()
